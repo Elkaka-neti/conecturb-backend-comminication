@@ -1,0 +1,11 @@
+{
+  "name": "conecturb-backend-comminication",
+  "version": "1.0.0",
+  "description": "The backend that will handle the API's messages, notifications, and communications",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
