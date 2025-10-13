@@ -2,6 +2,9 @@ const Whatsapp = require('./Whatsapp');
 const ExpoNot = require('./Mobile');
 
 class Notifications {
+  static whatsapp = new Whatsapp();
+  static expoNot = new ExpoNot();
+  
   static async create(user, messageTemplate, params = {}) {
     if (!user) {
       console.error("[404] Parâmetro 'user' não encontrado");
@@ -9,8 +12,8 @@ class Notifications {
     }
 
     const channels = [];
-    if (user.notifications.allows.includes("whatsapp")) channels.push(new Whatsapp());
-    if (user.notifications.allows.includes("expoApp")) channels.push(new ExpoNot());
+    if (user.notifications.allows.includes("whatsapp")) channels.push(whatsapp);
+    if (user.notifications.allows.includes("expoApp")) channels.push(expoNot);
 
     for (const ch of channels) {
       try {
