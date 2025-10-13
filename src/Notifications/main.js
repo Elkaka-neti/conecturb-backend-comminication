@@ -17,6 +17,12 @@ class Notifications {
     }
   }
   
+  async broadcast(users, messageTemplate, params = {}) {
+    const lista = users.map(user => this.create(user, messageTemplate, params));
+    //Mesmo se alguns falharem a promessa e resolvida.
+    return await Promise.allSettled(lista);
+  }
+  
 }
 
 module.exports = Notifications;
