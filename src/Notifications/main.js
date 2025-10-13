@@ -13,14 +13,18 @@ class Notifications {
     }
     
     for(const ch of channels) {
-      ch.send(user, messageTemplate, params);
+      try {
+      await ch.send(user, messageTemplate, params);
+      }catch(e){
+        console.error("[500] Falha ao enviar mensagem.")
+      }
     }
   }
   
-  async broadcast(users, messageTemplate, params = {}) {
+  static async broadcast(users, messageTemplate, params = {}) {
     const lista = users.map(user => {
       try {
-      this.create(user, messageTemplate, params)
+     await Notifications.create(user, messageTemplate, params)
       }catch(e){
         console.error("[500] Não foi possivel notificar esse usuario.")
       }
