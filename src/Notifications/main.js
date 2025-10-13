@@ -12,8 +12,8 @@ class Notifications {
     }
 
     const channels = [];
-    if (user.notifications.allows.includes("whatsapp")) channels.push(whatsapp);
-    if (user.notifications.allows.includes("expoApp")) channels.push(expoNot);
+    if (user.notifications.allows.includes("whatsapp")) channels.push(this.whatsapp);
+    if (user.notifications.allows.includes("expoApp")) channels.push(this.expoNot);
 
     for (const ch of channels) {
       try {
