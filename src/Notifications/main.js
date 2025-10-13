@@ -22,7 +22,7 @@ class Notifications {
   }
   
   static async broadcast(users, messageTemplate, params = {}) {
-    const lista = users.map(user => {
+    const lista = users.map(async user => {
       try {
      await Notifications.create(user, messageTemplate, params)
       }catch(e){
