@@ -1,4 +1,7 @@
-
+const eventTypes = require("../utils/eventTypes.js")
 module.export = (req, res) => {
-  //Logica aqui
+  const {data, type} = req.body;
+  const {user, store, itens = []} = data;
+  
+
 }
