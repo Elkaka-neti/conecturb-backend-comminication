@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "dockerMongo": "docker start mongodb",
     "start:all": "concurrently \"redis-server\" \"node src/Workers/pedidoWorker.js\" \"node index.js\""
   },
   "author": "",
