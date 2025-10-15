@@ -4,7 +4,7 @@ const eventTypes = require("../../utils/eventTypes.js");
 async function worker(event) {
     switch(event.type) {
       case eventTypes.PEDIDO_CRIADO:
-        //fun() {
+        console.log(`${JSON.stringify(event)}\n Chegamos aqui`);
         break;
       case eventTypes.NOTICAR_LOJA:
         //fun() {

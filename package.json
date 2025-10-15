@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start:all": "concurrently \"mongod --dbpath ./data\" \"redis-server\" \"node src/Workers/pedidoWorker.js\" \"node index.js\""
+    "start:all": "concurrently \"redis-server\" \"node src/Workers/pedidoWorker.js\" \"node index.js\""
   },
   "author": "",
   "license": "ISC",
