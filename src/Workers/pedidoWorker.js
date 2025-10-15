@@ -9,6 +9,27 @@ async function worker(event) {
       case eventTypes.NOTICAR_LOJA:
         //fun() {
         break;
+      case eventTypes.LOJA_ACEITOU:
+        //fun() {
+        break;
+      case eventTypes.LOJA_RECUSOU:
+        //fun() {
+        break;
+      case eventTypes.NOTIFICAR_ENTREGA:
+        //fun() { 
+        break;
+      case eventTypes.ENTREGADOR_ACEITOU:
+        //fun() { 
+        break;
+      case eventTypes.ENTREGADOR_RECUSOU:
+        //fun() { 
+        break;
+      case eventTypes.PEDIDO_CONCLUIDO:
+        //fun() { 
+        break;
+      case eventTypes.CLIENTE_RECUSOU:
+        //fun() { 
+        break;
       default:
         //fun() {
         break;
