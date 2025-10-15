@@ -5,11 +5,17 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js"
+    "start:all": "concurrently \"mongod --dbpath ./data\" \"redis-server\" \"node src/Workers/pedidoWorker.js\" \"node index.js\""
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^5.1.0"
+    "express": "^5.1.0",
+    "ioredis": "^5.8.1",
+    "mongodb": "^6.20.0",
+    "uuid": "^13.0.0"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1"
   }
 }

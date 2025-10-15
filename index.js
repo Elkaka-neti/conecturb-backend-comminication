@@ -1,7 +1,7 @@
 const express = require('express');
 const fs = require('fs');
 const path = require('path');
-const registerRoutes = require('./utils/registerRoutes');
+const registerRoutes = require('./utils/registerRouters');
 
 const app = express();
 
