@@ -1,7 +1,7 @@
 const {v4: uuidv4} = require("uuid");
-const PedidoDb = require("../src/Databases/permament/pedidoDatabase.js");
+const PedidoDb = require("../src/Databases/Permament/pedidoDatabase.js");
 const eventType = require("../utils/eventTypes.js");
-const PedidoFila = require("../src/Messaging/queueClient.js")
+const PedidoFila = require("../src/Messaging/pedidoFila.js")
 
 module.exports = async(req, res) => {
   const {data, type} = req.body;
