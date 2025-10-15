@@ -32,7 +32,7 @@ async function worker(event) {
         break;
       default:
         //fun() {
-        break;
+        return;
     }
     console.log(`Processando evento: ${event.type} para pedido ${event.data.pedidoId}`);
 }
