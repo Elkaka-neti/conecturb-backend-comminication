@@ -14,14 +14,14 @@ class PedidoFila {
         this.redis.on('connect', () => console.log(`Redis Fila: Conectado. Fila: ${this.queueName}`));
     }
 
-    async add(eventType, data) {
-        if (!eventType || !data) {
+    async add(eventTypes, data) {
+        if (!eventTypes || !data) {
             console.error('Dados inválidos para enfileiramento.');
             return;
         }
         
         const payload = {
-            type: eventType,
+            type: eventTypes,
             data: data,
             timestamp: new Date().toISOString()
             
