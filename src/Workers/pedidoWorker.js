@@ -1,4 +1,4 @@
-const PedidoFila = require('../messaging/PedidoFila');
+const PedidoFila = require('../Messaging/PedidoFila');
 const eventTypes = require("../utils/eventTypes.js");
 
 async function worker(event) {
