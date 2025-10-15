@@ -6,7 +6,7 @@ async function worker(event) {
       case eventTypes.PEDIDO_CRIADO:
         //fun() {
         break;
-      case eventTypes.PEDIDO_NOTICAR_LOJA:
+      case eventTypes.NOTICAR_LOJA:
         //fun() {
         break;
       default:
